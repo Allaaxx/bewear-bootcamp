@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
-
 const Product = () => {
   return (
     <div>
-      <Button> Bootcamp </Button> 
+      <h1>Product</h1>
     </div>
   );
 };
