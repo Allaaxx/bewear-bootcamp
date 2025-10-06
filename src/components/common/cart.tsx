@@ -55,7 +55,7 @@ export const Cart = () => {
           </div>
 
           {cart?.items && cart?.items.length > 0 && (
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 pb-16">
               <Separator />
 
               <div className="flex items-center justify-between text-xs font-medium">
