@@ -20,12 +20,19 @@ import { Cart } from "./cart";
 export const Header = () => {
   const { data: session } = authClient.useSession();
   return (
-    <header className="flex items-center justify-between p-5">
+    <header className="flex items-center justify-between p-4 md:p-6 lg:p-8">
       <Link href="/">
-        <Image src="/loki-white.jpg" alt="LOKI" width={100} height={26.14} />
+        <div className="relative h-15 w-28 sm:w-32 md:w-36">
+          <Image
+            src="/loki-white.jpg"
+            alt="LOKI"
+            fill
+            className="object-contain"
+          />
+        </div>
       </Link>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 md:gap-6">
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon">
