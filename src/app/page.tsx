@@ -25,16 +25,16 @@ const Home = async () => {
   return (
     <>
       <Header />
-      <div className="space-y-6">
+      <div className="container mx-auto space-y-6">
         <div className="px-5">
-          <Image
-            src="/banner-01.png"
-            alt="Leve uma vida com estilo"
-            height={0}
-            width={0}
-            sizes="100vw"
-            className="h-auto w-full"
-          />
+          <div className="bg-muted relative aspect-[3/1] w-full overflow-hidden rounded-md md:aspect-[4/1]">
+            <Image
+              src="/banner-01.png"
+              alt="Leve uma vida com estilo"
+              fill
+              className="object-contain p-4"
+            />
+          </div>
         </div>
 
         <ProductList products={products} title="Mais vendidos" />
@@ -44,19 +44,19 @@ const Home = async () => {
         </div>
 
         <div className="px-5">
-          <Image
-            src="/banner-02.png"
-            alt="Leve uma vida com estilo"
-            height={0}
-            width={0}
-            sizes="100vw"
-            className="h-auto w-full"
-          />
+          <div className="bg-muted relative aspect-[3/1] w-full overflow-hidden rounded-md md:aspect-[4/1]">
+            <Image
+              src="/banner-02.png"
+              alt="Leve uma vida com estilo"
+              fill
+              className="object-contain p-4"
+            />
+          </div>
         </div>
 
         <ProductList products={newlyCreatedProducts} title="Novos produtos" />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };
