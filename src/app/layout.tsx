@@ -40,7 +40,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="min-h-screen flex flex-col">
+        <div className="flex min-h-screen flex-col">
           <ReactQueryProvider>{children}</ReactQueryProvider>
           <SpeedInsights />
           <Toaster position="top-center" />
