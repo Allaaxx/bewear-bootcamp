@@ -46,27 +46,42 @@ const IdentificationPage = async () => {
   return (
     <div>
       <Header />
-      <div className="space-y-4 px-5">
-        <Addresses
-          shippingAddresses={shippingAddresses}
-          defaultShippingAddressId={cart.shippingAddress?.id || null}
-        />
-        <CartSummary
-          subtotalInCents={cartTotalInCents}
-          totalInCents={cartTotalInCents}
-          products={cart.items.map((item) => ({
-            id: item.productVariant.id,
-            name: item.productVariant.product.name,
-            variantName: item.productVariant.name,
-            quantity: item.quantity,
-            priceInCents: item.productVariant.priceInCents,
-            imageUrl: item.productVariant.imageUrl,
-          }))}
-        />
+
+      <div className="container mx-auto min-h-[40vw] px-5 py-8">
+        <div className="md:grid md:grid-cols-3 md:gap-8">
+          <main className="md:col-span-2 space-y-6">
+            <Addresses
+              shippingAddresses={shippingAddresses}
+              defaultShippingAddressId={cart.shippingAddress?.id || null}
+            />
+            <div className="prose max-w-none">
+              <p className="text-muted-foreground">
+                Escolha o endereço de entrega e confirme os dados antes de
+                prosseguir para o pagamento.
+              </p>
+            </div>
+          </main>
+
+          <aside className="md:col-span-1">
+            <div className="sticky top-20">
+              <CartSummary
+                subtotalInCents={cartTotalInCents}
+                totalInCents={cartTotalInCents}
+                products={cart.items.map((item) => ({
+                  id: item.productVariant.id,
+                  name: item.productVariant.product.name,
+                  variantName: item.productVariant.name,
+                  quantity: item.quantity,
+                  priceInCents: item.productVariant.priceInCents,
+                  imageUrl: item.productVariant.imageUrl,
+                }))}
+              />
+            </div>
+          </aside>
+        </div>
       </div>
-      <div className="mt-12">
-        <Footer />
-      </div>
+
+      <Footer />
     </div>
   );
 };
