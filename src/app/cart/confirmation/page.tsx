@@ -3,7 +3,6 @@ import { redirect } from "next/navigation";
 
 import Footer from "@/components/common/footer";
 import { Header } from "@/components/common/header";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { db } from "@/db";
 import { auth } from "@/lib/auth";
@@ -47,7 +46,7 @@ const ConfirmationPage = async () => {
   return (
     <div>
       <Header />
-      <div className="space-y-4 px-5">
+      <div className="space-y-4 px-5 container mx-auto min-h-[40vw]">
         <Card>
           <CardHeader>
             <CardTitle>Identificação</CardTitle>
