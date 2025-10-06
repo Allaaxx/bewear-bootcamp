@@ -19,14 +19,14 @@ const ProductItem = ({ product, textContainerClassName }: ProductItemProps) => {
       href={`/product-variant/${firstVariant.slug}`}
       className="flex flex-col gap-4"
     >
-      <Image
-        src={firstVariant.imageUrl}
-        alt={firstVariant.name}
-        sizes="100vw"
-        height={0}
-        width={0}
-        className="h-auto w-full rounded-3xl"
-      />
+      <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-muted">
+        <Image
+          src={firstVariant.imageUrl}
+          alt={firstVariant.name}
+          fill
+          className="object-contain p-2"
+        />
+      </div>
       <div
         className={cn(
           "flex max-w-[200px] flex-col gap-1",
