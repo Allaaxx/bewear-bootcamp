@@ -2,6 +2,7 @@ import { eq } from "drizzle-orm";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
+import Footer from "@/components/common/footer";
 import { Header } from "@/components/common/header";
 import { db } from "@/db";
 import { orderTable } from "@/db/schema";
@@ -34,7 +35,7 @@ const MyOrdersPage = async () => {
   return (
     <>
       <Header />
-      <div className="px-5">
+      <div className="container mx-auto px-5">
         <Orders
           orders={orders.map((order) => ({
             id: order.id,
@@ -52,6 +53,7 @@ const MyOrdersPage = async () => {
           }))}
         />
       </div>
+      <Footer />
     </>
   );
 };
