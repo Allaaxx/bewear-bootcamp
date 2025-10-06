@@ -1,6 +1,6 @@
 "use client";
 
-import { LogInIcon, LogOutIcon, MenuIcon } from "lucide-react";
+import { LogInIcon, LogOutIcon, MenuIcon, PackageIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -72,6 +72,15 @@ export const Header = () => {
                     >
                       <LogOutIcon />
                     </Button>
+                  </div>
+                  <div className="mt-4">
+                    <Link
+                      href="/my-orders"
+                      className="flex items-center gap-2 text-sm font-medium"
+                    >
+                      <PackageIcon className="h-4 w-4" />
+                      Meus pedidos
+                    </Link>
                   </div>
                 </>
               ) : (
