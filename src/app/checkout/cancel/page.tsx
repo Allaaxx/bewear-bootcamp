@@ -8,7 +8,7 @@ const CheckoutCancelPage = () => {
   return (
     <>
       <Header />
-      <main className="container mx-auto py-16 px-5 text-center">
+      <main className="container mx-auto px-5 py-16 text-center">
         <Image
           src="/illustration.svg"
           alt="Cancel"
@@ -17,13 +17,16 @@ const CheckoutCancelPage = () => {
           className="mx-auto"
         />
         <h1 className="mt-6 text-2xl font-semibold">Pagamento cancelado</h1>
-        <p className="mt-3 text-muted-foreground">
+        <p className="text-muted-foreground mt-3">
           Seu pagamento foi cancelado. Você pode revisar seu carrinho ou tentar
           novamente.
         </p>
 
         <div className="mt-8 flex justify-center gap-4">
-          <Link href="/cart/identification" className="rounded-full bg-primary px-4 py-2 text-white">
+          <Link
+            href="/cart/identification"
+            className="bg-primary rounded-full px-4 py-2 text-white"
+          >
             Ver carrinho
           </Link>
           <Link href="/" className="rounded-full border px-4 py-2">
